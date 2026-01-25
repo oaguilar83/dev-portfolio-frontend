@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <main>
         <Home />
-        <About />
         <Contact />
       </main>
       <footer className="footer">
