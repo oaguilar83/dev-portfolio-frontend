@@ -3,8 +3,17 @@
 }
  
 .image_round {
-  width: 200px;
-  height:200px;
+  width: 100px;
+  height:100px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media screen {
+  @media (min-width: 768px) {
+    .image_round {
+      width: 150px;
+      height:150px;
+    }
+  }
 }

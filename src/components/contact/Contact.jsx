@@ -25,7 +25,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className={`${globalStyles.section} ${styles.contact_section}`}>
+    <section id="contact" className={globalStyles.section}>
       <div className={globalStyles.section_content}>
         <h2 className={styles.title}>Contact Me</h2>
         <form className={styles.form} onSubmit={handleSubmit}>

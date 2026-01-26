@@ -2,10 +2,17 @@
   background-color: var(--secondary-background-color);
   color: var(--primary-font-color);
   text-align: center;
-  padding: 2rem;
-  margin-top: auto;
+  padding: 1rem;
 }
 
 .footer_p {
   background-color: var(--secondary-background-color);
+}
+
+@media screen {
+  @media (min-width: 768px) {
+    .footer {
+      padding: 2rem;
+    }
+  }
 }

@@ -1,16 +1,9 @@
-.image_text_content {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  text-align: left;
-}
-
 .text {
   margin: 1rem;
 }
 
 .text_title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--primary-font-color);
 }
@@ -22,8 +15,32 @@
 }
 
 .text_description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--tertiary-font-color);
-  margin-bottom: 2rem;
-  line-height: 1.8;
+  line-height: 1.5;
+}
+
+@media screen {
+  @media (min-width: 768px) {
+    .text_title {
+      font-size: 3rem;
+    }
+
+    .text_subtitle {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .image_text_content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+
+    .text_subtitle {
+      font-size: 2rem;
+    }
+  }
 }
