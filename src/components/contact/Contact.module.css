@@ -1,11 +1,10 @@
 .contact_section {
-  color: white;
 }
 
 .title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: white;
+  color: var(--primary-font-color);
 }
 
 .form {
@@ -21,14 +20,15 @@
 .form_group label {
   display: block;
   font-size: 1.3rem;
-  color: #eceff1;
+  color: var(--secondary-font-color);
   text-align: left;
   margin-bottom: 0.5rem;
 }
 
 .form_group input,
 .form_group textarea {
-  color: white;
+  background-color: var(--primary-background-color);
+  color: var(--primary-font-color);
   width: 100%;
   padding: 0.75rem 1rem;
   border: 2px solid #ddd;
@@ -38,16 +38,10 @@
   font-family: inherit;
 }
 
-#name::placeholder,
-#email::placeholder,
-#message::placeholder {
-  color: #b0bec5;
-}
-
 .form_group input:focus,
 .form_group textarea:focus {
   outline: none;
-  border-color: #4fc3f7;
+  border-color: var(--accent-color);
 }
 
 .form-group textarea {
@@ -58,8 +52,8 @@
 .submit_btn {
   width: 100%;
   padding: 1rem;
-  background-color: #161616;
-  color: white;
+  background-color: var(--secondary-background-color);
+  color: var(--primary-font-color);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -70,7 +64,7 @@
 }
 
 .submit_btn:hover {
-  background-color: #4fc3f7;
+  background-color: var(--accent-color);
   transform: translateY(-2px);
 }
 

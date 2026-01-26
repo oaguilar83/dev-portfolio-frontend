@@ -7,23 +7,22 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: #151515;
-  color: white;
+  background-color: var(--secondary-background-color);
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar_links {
-  background-color: #151515;
+  background-color: var(--secondary-background-color);
   display: flex;
   list-style: none;
   gap: 1rem;
 }
 
 .navbar_links_button {
-  background-color: #151515;
+  background-color: var(--secondary-background-color);
   border: none;
-  color: white;
+  color: var(--primary-font-color);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -33,6 +32,5 @@
 }
 
 .navbar_links_button:hover {
-  background-color: #4fc3f7;
-  color: white;
+  background-color: var(--accent-color);
 }

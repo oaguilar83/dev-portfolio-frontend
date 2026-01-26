@@ -1,11 +1,11 @@
 .footer {
-  background-color: #151515;
-  color: white;
+  background-color: var(--secondary-background-color);
+  color: var(--primary-font-color);
   text-align: center;
   padding: 2rem;
   margin-top: auto;
 }
 
 .footer_p {
-  background-color: #151515;
+  background-color: var(--secondary-background-color);
 }

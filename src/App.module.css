@@ -1,5 +1,13 @@
+:root {
+  --primary-background-color: #0F0F0F;
+  --secondary-background-color: #151515;
+  --accent-color: #4fc3f7;
+  --primary-font-color: white;
+  --secondary-font-color: #eceff1;
+  --tertiary-font-color: #b0bec5;
+}
+
 * {
-  background-color: #0F0F0F;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,9 +27,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--primary-background-color);
 }
 
-/* Section Styles */
 .section {
   min-height: 100vh;
   display: flex;
@@ -43,7 +51,7 @@ body {
 .skills h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #eceff1;
+  color: var(--secondary-font-color);
   text-align: left;
 }
 
@@ -55,7 +63,7 @@ body {
 }
 
 .skill-tag {
-  background-color: #161616;
+  background-color: var(--secondary-background-color);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
