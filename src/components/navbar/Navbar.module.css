@@ -45,6 +45,7 @@
   @media (hover: hover) {
   .navbar_links_button:hover {
     background-color: var(--accent-color);
+    transform: translateY(-2px);
     }
   }
 }
