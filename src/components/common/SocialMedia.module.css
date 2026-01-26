@@ -3,13 +3,15 @@
   justify-content: center;
   gap: 1rem;
   margin: 1rem;
+}
 
-  svg {
-      font-size: 2.5rem;
-      color: white;
-  }
+.icon {
+  color: white;
+  font-size: 2.5rem !important;
+}
 
-  svg:hover {
-      color: #4fc3f7;
+@media (hover: hover) {
+  .icon:hover {
+    color: var(--accent-color);
   }
 }

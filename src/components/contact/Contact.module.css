@@ -60,15 +60,6 @@
   font-family: inherit;
 }
 
-.submit_btn:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-2px);
-}
-
-.submit_btn:active {
-  transform: translateY(0);
-}
-
 @media screen {
   @media (min-width: 768px) {
     .title {
@@ -79,4 +70,11 @@
       font-size: 2rem;
     }
   }
+
+  @media (hover: hover) {
+  .submit_btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+  }
+}
 }

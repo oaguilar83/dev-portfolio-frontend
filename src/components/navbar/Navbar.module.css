@@ -31,10 +31,6 @@
   font-family: inherit;
 }
 
-.navbar_links_button:hover {
-  background-color: var(--accent-color);
-}
-
 @media screen {
   @media (min-width: 768px) {
     .navbar {
@@ -43,6 +39,12 @@
 
     .navbar_links_button {
       font-size: 1.5rem;
+    }
+  }
+
+  @media (hover: hover) {
+  .navbar_links_button:hover {
+    background-color: var(--accent-color);
     }
   }
 }
