@@ -6,8 +6,9 @@
 }
 
 .icon {
-  color: white;
+  color: var(--primary-font-color);
   font-size: 2.5rem !important;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 @media (hover: hover) {
