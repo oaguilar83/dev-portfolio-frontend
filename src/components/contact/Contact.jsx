@@ -3,6 +3,12 @@ import styles from './Contact.module.css';
 
 import { useState } from 'react';
 
+import emailjs from '@emailjs/browser'
+
+const SERVICE_ID = "service_5udy9gt";
+const TEMPLATE_ID = "template_x1i4ruq";
+const PUBLIC_KEY = "vtUTx3YBMIQc5fu4W";
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,16 +18,24 @@ function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prevData => ({
+      ...prevData,
       [name]: value
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Thank you ${formData.name}! Your message has been received.`);
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+        alert(`Thank you ${formData.name}! Your message has been received.`);
+        setFormData({ name: '', email: '', message: '' });
+      }, (error) => {
+          console.log(error.text);
+          alert('Something went wrong!');
+      });
   };
 
   return (
