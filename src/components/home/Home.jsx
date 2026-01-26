@@ -8,7 +8,7 @@ function Home() {
     <section id="home" className={globalStyles.section}>
       <div className={globalStyles.section_content}>
         <div className={styles.image_text_content}>
-          <RoundImage image="src/assets/profile_picture.jpeg" />
+          <RoundImage image="/images/profile_picture.jpeg" />
           <div className={styles.text}>
             <h1 className={styles.text_title}>Hello, World!<br></br>I'm Oscar Aguilar</h1>
             <h2 className={styles.text_subtitle}>Software Developer</h2>
