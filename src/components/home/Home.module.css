@@ -1,0 +1,33 @@
+.home_section {
+  color: white;
+}
+
+.image_text_content {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  text-align: left;
+}
+
+.text {
+  margin: 1rem;
+}
+
+.text_title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.text_subtitle {
+  font-size: 1.5rem;
+  color: #eceff1;
+  margin-bottom: 1.5rem;
+}
+
+.text_desctiption {
+  font-size: 1.1rem;
+  color: #b0bec5;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}

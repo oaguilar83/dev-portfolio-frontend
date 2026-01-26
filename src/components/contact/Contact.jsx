@@ -1,3 +1,6 @@
+import globalStyles from '../../App.module.css';
+import styles from './Contact.module.css';
+
 import { useState } from 'react';
 
 function Contact() {
@@ -22,11 +25,11 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="section contact-section">
-      <div className="section-content">
-        <h2>Contact Me</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
+    <section id="contact" className={`${globalStyles.section} ${styles.contact_section}`}>
+      <div className={globalStyles.section_content}>
+        <h2 className={styles.title}>Contact Me</h2>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.form_group}>
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -38,7 +41,7 @@ function Contact() {
               placeholder="Your name"
             />
           </div>
-          <div className="form-group">
+          <div className={styles.form_group}>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -50,7 +53,7 @@ function Contact() {
               placeholder="your.email@example.com"
             />
           </div>
-          <div className="form-group">
+          <div className={styles.form_group}>
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
@@ -62,7 +65,7 @@ function Contact() {
               rows="5"
             />
           </div>
-          <button type="submit" className="submit-btn">Send Message</button>
+          <button type="submit" className={styles.submit_btn}>Send Message</button>
         </form>
       </div>
     </section>

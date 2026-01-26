@@ -1,20 +1,18 @@
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import './App.css';
-import About from './components/About';
+import Navbar from './components/navbar/Navbar';
+import Home from './components/home/Home';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Navbar />
       <main>
         <Home />
         <Contact />
       </main>
-      <footer className="footer">
-        <p>&copy; 2026 Oscar Aguilar's Dev Portfolio. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,79 @@
+.contact_section {
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form_group {
+  margin-bottom: 1.5rem;
+}
+
+.form_group label {
+  display: block;
+  font-size: 1.3rem;
+  color: #eceff1;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.form_group input,
+.form_group textarea {
+  color: white;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+#name::placeholder,
+#email::placeholder,
+#message::placeholder {
+  color: #b0bec5;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+  outline: none;
+  border-color: #4fc3f7;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit_btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #161616;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-family: inherit;
+}
+
+.submit_btn:hover {
+  background-color: #4fc3f7;
+  transform: translateY(-2px);
+}
+
+.submit_btn:active {
+  transform: translateY(0);
+}
