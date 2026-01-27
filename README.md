@@ -81,3 +81,7 @@ src/
 ├── index.css         # Base styles
 └── main.jsx          # Entry point
 ```
+
+## License
+
+MIT
