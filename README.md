@@ -1,4 +1,4 @@
-# Dev Portfolio Frontend
+# dev-portfolio-frontend
 
 A personal developer portfolio website built with React and Vite.
 
