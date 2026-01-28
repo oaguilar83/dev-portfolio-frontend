@@ -60,6 +60,6 @@ jobs:
           SCRIPT_BEFORE: |
             mkdir -p ${{ secrets.EC2_DEPLOY_PATH }}
           SCRIPT_AFTER: |
-            rm -rf ${{ secrets.EC2_SERVER_PATH }}/*
-            mv ${{ secrets.EC2_DEPLOY_PATH }}/* ${{ secrets.EC2_SERVER_PATH }}
+            sudo rm -rf ${{ secrets.EC2_SERVER_PATH }}/*
+            sudo mv ${{ secrets.EC2_DEPLOY_PATH }}/* ${{ secrets.EC2_SERVER_PATH }}
             rm -r ${{ secrets.EC2_DEPLOY_PATH }}
