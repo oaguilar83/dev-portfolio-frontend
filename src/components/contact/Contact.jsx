@@ -28,12 +28,11 @@ function Contact() {
     e.preventDefault();
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
-      .then((result) => {
-        console.log(result.text);
+      .then(() => {
         alert(`Thank you ${formData.name}! Your message has been received.`);
         setFormData({ name: '', email: '', message: '' });
       }, (error) => {
-          console.log(error.text);
+          console.error(error);
           alert('Something went wrong!');
       });
   };
