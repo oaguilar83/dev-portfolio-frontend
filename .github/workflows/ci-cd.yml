@@ -58,7 +58,7 @@ jobs:
           REMOTE_USER: ${{ secrets.EC2_USERNAME }}
           TARGET: ${{ secrets.EC2_DEPLOY_PATH }}
           SCRIPT_BEFORE: |
-            sudo rm -r ${{ EC2_SERVER_PATH }}/*
+            sudo rm -r ${{ secrets.EC2_SERVER_PATH }}/*
           SCRIPT_AFTER: |
             sudo mv ${{ secrets.EC2_DEPLOY_PATH }}/dist/* ${{ EC2_SERVER_PATH }}
             rm -r ${{ secrets.EC2_DEPLOY_PATH }}/dist
