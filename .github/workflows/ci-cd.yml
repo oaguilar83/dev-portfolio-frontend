@@ -51,7 +51,7 @@ jobs:
 
       - name: Deploy to EC2
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "dist/"
           REMOTE_HOST: ${{ secrets.EC2_HOST }}
@@ -60,5 +60,5 @@ jobs:
           SCRIPT_BEFORE: |
             sudo rm -r ${{ secrets.EC2_SERVER_PATH }}/*
           SCRIPT_AFTER: |
-            sudo mv ${{ secrets.EC2_DEPLOY_PATH }}/dist/* ${{ EC2_SERVER_PATH }}
+            sudo mv ${{ secrets.EC2_DEPLOY_PATH }}/dist/* ${{ secrets.EC2_SERVER_PATH }}
             rm -r ${{ secrets.EC2_DEPLOY_PATH }}/dist
