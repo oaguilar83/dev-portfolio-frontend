@@ -59,7 +59,6 @@ jobs:
           TARGET: ${{ secrets.EC2_DEPLOY_PATH }}
           SCRIPT_BEFORE: |
             mkdir -p ${{ secrets.EC2_DEPLOY_PATH }}
-            sudo rm -r ${{ secrets.EC2_SERVER_PATH }}/*
           SCRIPT_AFTER: |
             sudo mv ${{ secrets.EC2_DEPLOY_PATH }}/* ${{ secrets.EC2_SERVER_PATH }}
             rm -r ${{ secrets.EC2_DEPLOY_PATH }}
