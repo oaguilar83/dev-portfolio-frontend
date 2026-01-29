@@ -30,6 +30,17 @@
   font-family: inherit;
 }
 
+@media (hover: hover) {
+  .navbar_links_button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+  }
+}
+
+.active_link {
+  text-decoration: underline;
+}
+
 @media screen {
   @media (min-width: 768px) {
     .navbar {
@@ -38,13 +49,6 @@
 
     .navbar_links_button {
       font-size: 1.5rem;
-    }
-  }
-
-  @media (hover: hover) {
-  .navbar_links_button:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-2px);
     }
   }
 }

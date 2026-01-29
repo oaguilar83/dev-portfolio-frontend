@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import styles from './Projects.module.css';
 import globalStyles from '../../App.module.css';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+import { useState } from 'react';
 
 const projects = [
   {
