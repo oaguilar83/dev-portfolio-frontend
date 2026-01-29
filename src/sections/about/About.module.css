@@ -26,11 +26,11 @@
 }
 
 .skill_item {
-  background-color: var(--secondary-background-color);
-  color: var(--secondary-font-color);
+  background-color: var(--secondary-font-color);
+  color: var(--primary-background-color);
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 @media screen {

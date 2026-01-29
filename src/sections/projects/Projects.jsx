@@ -11,7 +11,15 @@ const projects = [
     title: 'Dev Portfolo',
     description: 'A comprehensive developer portfolio project showcasing frontend development and infrastructure automation skills.',
     tech: ['React', 'JavaScript', 'HTML5', 'CSS3', 'AWS', 'Terraform', 'Ansible', 'GitHub Actions'],
-    link: 'https://www.oscaraguilardev.com/',
+    link: '#',
+    github: 'https://github.com/oaguilar83/dev-portfolio',
+  },
+  {
+    id: 2,
+    title: 'The Hour of Happiness',
+    description: 'Coming Soon',
+    tech: [],
+    link: '',
     github: 'https://github.com/oaguilar83/dev-portfolio',
   },
 ];
