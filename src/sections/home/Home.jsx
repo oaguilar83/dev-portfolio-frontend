@@ -1,5 +1,5 @@
-import RoundImage from '../common/RoundImage';
-import SocialMedia from '../common/SocialMedia';
+import RoundImage from '../../components/RoundImage';
+import SocialMedia from '../../components/SocialMedia';
 import globalStyles from '../../App.module.css';
 import styles from './Home.module.css';
 
