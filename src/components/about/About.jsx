@@ -7,13 +7,13 @@ function About() {
       <div className={globalStyles.section_content}>
         <h2 className={styles.title}>About Me</h2>
         <p className={styles.description}>
-          I'm a passionate software developer with a love for creating elegant solutions
-          to complex problems. With experience in full-stack development, I enjoy building
-          applications that make a difference.
+          I'm a Software Engineer with 5 years of experience in the automotive infotainment
+          industry. I've worked across frontend, middleware, and DevOps teams, which has made me a
+          versatile engineer who enjoys solving problems at every layer of the stack.
         </p>
         <p className={styles.description}>
-          When I'm not coding, you can find me exploring new technologies, contributing
-          to open source projects, or learning about the latest trends in software development.
+          Looking for my next challenge in a Full Stack, Backend, Frontend, or DevOps role where I can
+          bring both technical breadth and a collaborative mindset.
         </p>
         <div className={styles.skills}>
           <h2 className={styles.skills_title}>Skills</h2>
