@@ -1,4 +1,4 @@
-import styles from './SocialMedia.module.css';
+import styles from './SocialMediaContainer.module.css';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
