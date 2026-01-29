@@ -31,7 +31,6 @@
   padding: 0.5rem 1rem;
   border-radius: 8px;
   font-size: 1rem;
-  transition: background-color 0.3s, transform 0.2s;
 }
 
 @media screen {
@@ -42,13 +41,6 @@
 
     .skills_title {
       font-size: 2rem;
-    }
-  }
-
-  @media (hover: hover) {
-    .skill_item:hover {
-      background-color: var(--accent-color);
-      transform: translateY(-2px);
     }
   }
 }
