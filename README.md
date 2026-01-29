@@ -9,7 +9,8 @@ A personal developer portfolio website built with React and Vite.
 - **Projects Section** - Showcase of portfolio projects
 - **Contact Form** - Email contact form powered by EmailJS
 - **Responsive Design** - CSS Modules for component-scoped styling
-- **Smooth Navigation** - Scroll-based navigation with active section highlighting
+- **Smooth Navigation** - Scroll-based navigation with active section highlighting and debounced scroll events
+- **Accessibility** - Proper alt text and aria-labels for screen reader support
 
 ## Tech Stack
 
@@ -31,6 +32,24 @@ A personal developer portfolio website built with React and Vite.
 ```bash
 npm install
 ```
+
+### Configuration
+
+Copy the example environment file and fill in your EmailJS credentials:
+
+```bash
+cp .env.example .env
+```
+
+Required environment variables:
+
+| Variable | Description |
+|----------|-------------|
+| `VITE_EMAILJS_SERVICE_ID` | Your EmailJS service ID |
+| `VITE_EMAILJS_TEMPLATE_ID` | Your EmailJS email template ID |
+| `VITE_EMAILJS_PUBLIC_KEY` | Your EmailJS public key |
+
+Get these values from your [EmailJS dashboard](https://www.emailjs.com/).
 
 ### Development
 
