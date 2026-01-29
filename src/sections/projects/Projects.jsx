@@ -20,7 +20,7 @@ const projects = [
     description: 'Coming Soon',
     tech: [],
     link: '',
-    github: 'https://github.com/oaguilar83/dev-portfolio',
+    github: '',
   },
 ];
 
