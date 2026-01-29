@@ -1,9 +1,7 @@
 name: CI/CD Pipeline
 
 on:
-  push:
   pull_request:
-    branches: [main]
     types: [opened, synchronize, reopened, closed]
 
 jobs:
@@ -32,7 +30,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.base.ref == 'main' && github.event.pull_request.merged == true
 
     steps:
       - name: Checkout repository
