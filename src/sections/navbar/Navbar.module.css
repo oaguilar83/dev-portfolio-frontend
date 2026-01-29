@@ -15,7 +15,6 @@
   background-color: var(--secondary-background-color);
   display: flex;
   list-style: none;
-  gap: 1rem;
 }
 
 .navbar_links_button {
@@ -45,6 +44,10 @@
   @media (min-width: 768px) {
     .navbar {
       padding: 2rem;
+    }
+
+    .navbar_links {
+      gap: 1rem;
     }
 
     .navbar_links_button {
