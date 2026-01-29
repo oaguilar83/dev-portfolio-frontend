@@ -26,7 +26,7 @@
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s;
   font-family: inherit;
 }
 
@@ -37,7 +37,7 @@
   }
 }
 
-.active_link {
+.active_section {
   text-decoration: underline;
 }
 
