@@ -8,19 +8,21 @@ import { useState } from 'react';
 const projects = [
   {
     id: 1,
-    title: 'Dev Portfolo',
+    title: 'Dev Portfolio',
     description: 'A comprehensive developer portfolio project showcasing frontend development and infrastructure automation skills.',
     tech: ['React', 'JavaScript', 'HTML5', 'CSS3', 'AWS', 'Terraform', 'Ansible', 'GitHub Actions'],
     link: '#',
     github: 'https://github.com/oaguilar83/dev-portfolio',
+    comingSoon: false,
   },
   {
     id: 2,
     title: 'The Hour of Happiness',
-    description: 'Coming Soon',
+    description: 'A project currently in development. Stay tuned for updates!',
     tech: [],
-    link: '',
-    github: '',
+    link: null,
+    github: null,
+    comingSoon: true,
   },
 ];
 
@@ -49,33 +51,46 @@ function Projects() {
         <div className={styles.carousel_container}>
           <div className={styles.tile}>
             <div className={styles.tile_content}>
-              <h3 className={styles.tile_title}>{currentProject.title}</h3>
+              <div className={styles.tile_header}>
+                <h3 className={styles.tile_title}>{currentProject.title}</h3>
+                {currentProject.comingSoon && (
+                  <span className={styles.coming_soon_badge}>Coming Soon</span>
+                )}
+              </div>
               <p className={styles.tile_description}>{currentProject.description}</p>
-              <div className={styles.tech_stack}>
-                {currentProject.tech.map((tech, index) => (
-                  <span key={index} className={styles.tech_tag}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className={styles.project_links}>
-                <a
-                  href={currentProject.link}
-                  className={styles.project_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={currentProject.github}
-                  className={styles.project_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-              </div>
+              {currentProject.tech.length > 0 && (
+                <div className={styles.tech_stack}>
+                  {currentProject.tech.map((tech, index) => (
+                    <span key={index} className={styles.tech_tag}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {!currentProject.comingSoon && (
+                <div className={styles.project_links}>
+                  {currentProject.link && (
+                    <a
+                      href={currentProject.link}
+                      className={styles.project_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {currentProject.github && (
+                    <a
+                      href={currentProject.github}
+                      className={styles.project_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
