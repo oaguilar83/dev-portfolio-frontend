@@ -42,6 +42,21 @@
   border-color: var(--accent-color);
 }
 
+.input_error {
+  border-color: #f44336;
+}
+
+.input_error:focus {
+  border-color: #f44336;
+}
+
+.error_message {
+  display: block;
+  color: #f44336;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
 .form-group textarea {
   resize: vertical;
   min-height: 120px;
