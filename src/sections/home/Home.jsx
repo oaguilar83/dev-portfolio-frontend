@@ -1,5 +1,5 @@
 import RoundImage from '../../components/RoundImage';
-import SocialMedia from '../../components/SocialMedia';
+import SocialMediaContainer from '../../components/SocialMediaContainer';
 import globalStyles from '../../App.module.css';
 import styles from './Home.module.css';
 
@@ -19,7 +19,7 @@ function Home() {
             </p>
           </div>
         </div>
-        <SocialMedia />
+        <SocialMediaContainer />
       </div>
     </section>
   );
