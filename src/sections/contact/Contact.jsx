@@ -1,9 +1,8 @@
+import { useState } from 'react';
+import toast from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 import globalStyles from '../../App.module.css';
 import styles from './Contact.module.css';
-
-import { useState } from 'react';
-
-import emailjs from '@emailjs/browser'
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -88,13 +87,13 @@ function Contact() {
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
       .then(() => {
-        alert(`Thank you ${formData.name}! Your message has been received.`);
+        toast.success(`Thank you ${formData.name}! Your message has been received.`);
         setFormData({ name: '', email: '', message: '' });
         setErrors({});
         setTouched({});
       }, (error) => {
           console.error(error);
-          alert('Something went wrong. Please try again later.');
+          toast.error('Something went wrong. Please try again later.');
       })
       .finally(() => {
         setIsLoading(false);

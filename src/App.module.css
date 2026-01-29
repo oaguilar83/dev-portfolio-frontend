@@ -1,9 +1,9 @@
 :root {
   --primary-background-color: #0F0F0F;
   --secondary-background-color: #151515;
-  --accent-color: #4fc3f7;
+  --accent-color: #4FC3F7;
   --primary-font-color: white;
-  --secondary-font-color: #eceff1;
+  --secondary-font-color: #ECEFF1;
 }
 
 * {
