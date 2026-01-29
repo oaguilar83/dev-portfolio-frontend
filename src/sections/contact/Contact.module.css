@@ -61,8 +61,14 @@
   font-family: inherit;
 }
 
+.submit_btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 @media (hover: hover) {
-  .submit_btn:hover {
+  .submit_btn:hover:not(:disabled) {
     background-color: var(--accent-color);
     transform: translateY(-2px);
   }

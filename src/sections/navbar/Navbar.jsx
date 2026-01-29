@@ -1,14 +1,15 @@
 import styles from './Navbar.module.css';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function Navbar() {
   const [activeSection, setSection] = useState('');
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     const sections = ['home', 'about', 'projects', 'contact'];
 
-    const handleScroll = () => {
+    const updateActiveSection = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       for (const sectionId of sections) {
@@ -25,10 +26,26 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    const handleScroll = () => {
+      if (timeoutRef.current) {
+        return;
+      }
 
-    return () => window.removeEventListener('scroll', handleScroll);
+      timeoutRef.current = setTimeout(() => {
+        updateActiveSection();
+        timeoutRef.current = null;
+      }, 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    updateActiveSection();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
   }, []);
 
   const scrollToSection = (sectionId) => {

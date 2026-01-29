@@ -5,9 +5,9 @@ import { useState } from 'react';
 
 import emailjs from '@emailjs/browser'
 
-const SERVICE_ID = "service_5udy9gt";
-const TEMPLATE_ID = "template_x1i4ruq";
-const PUBLIC_KEY = "vtUTx3YBMIQc5fu4W";
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -15,6 +15,7 @@ function Contact() {
     email: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,6 +27,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
       .then(() => {
@@ -33,7 +35,10 @@ function Contact() {
         setFormData({ name: '', email: '', message: '' });
       }, (error) => {
           console.error(error);
-          alert('Something went wrong!');
+          alert('Something went wrong. Please try again later.');
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -78,7 +83,9 @@ function Contact() {
               rows="5"
             />
           </div>
-          <button type="submit" className={styles.submit_btn}>Send Message</button>
+          <button type="submit" className={styles.submit_btn} disabled={isLoading}>
+            {isLoading ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
       </div>
     </section>
