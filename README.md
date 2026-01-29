@@ -61,7 +61,7 @@ npm run lint
 
 This project uses GitHub Actions for continuous integration and deployment:
 
-- **CI**: Runs linting and build on every push to any branch
+- **CI**: Runs linting and build on every pull request
 - **CD**: Automatically deploys to EC2 when a pull request is merged to main
 
 ### Manual Deployment (GitHub Pages)
