@@ -9,7 +9,7 @@ function Home() {
       <div className={globalStyles.section_content}>
         <div className={styles.image_text_content}>
           <div className={styles.image}>
-            <RoundImage image="images/profile_picture.jpeg" />
+            <RoundImage image="images/profile_picture.jpeg" alt="Handsome young man" />
           </div>
           <div className={styles.text}>
             <h1 className={styles.text_title}>Hello, World!<br></br>I&#39;m Oscar Aguilar</h1>
