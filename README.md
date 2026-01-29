@@ -5,6 +5,7 @@ A personal developer portfolio website built with React and Vite.
 ## Features
 
 - **Home Section** - Profile introduction with bio and social media links
+- **About Me Section** - Personal background and professional summary
 - **Contact Form** - Email contact form powered by EmailJS
 - **Responsive Design** - CSS Modules for component-scoped styling
 - **Smooth Navigation** - Scroll-based navigation between sections
@@ -56,7 +57,14 @@ npm run lint
 
 ## Deployment
 
-This project is configured for GitHub Pages deployment.
+### CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+- **CI**: Runs linting and build on every push to any branch
+- **CD**: Automatically deploys to EC2 when a pull request is merged to main
+
+### Manual Deployment (GitHub Pages)
 
 ```bash
 # Build for GitHub Pages
@@ -71,6 +79,7 @@ npm run gh-pages-deploy
 ```
 src/
 ├── components/
+│   ├── about/        # About me section
 │   ├── common/       # Reusable components (RoundImage, SocialMedia)
 │   ├── contact/      # Contact form section
 │   ├── footer/       # Footer component
