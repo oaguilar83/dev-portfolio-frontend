@@ -5,10 +5,11 @@ A personal developer portfolio website built with React and Vite.
 ## Features
 
 - **Home Section** - Profile introduction with bio and social media links
-- **About Me Section** - Personal background and professional summary
+- **About Me Section** - Personal background, professional summary, and skills tags
+- **Projects Section** - Showcase of portfolio projects
 - **Contact Form** - Email contact form powered by EmailJS
 - **Responsive Design** - CSS Modules for component-scoped styling
-- **Smooth Navigation** - Scroll-based navigation between sections
+- **Smooth Navigation** - Scroll-based navigation with active section highlighting
 
 ## Tech Stack
 
@@ -78,17 +79,20 @@ npm run gh-pages-deploy
 
 ```
 src/
-├── components/
-│   ├── about/        # About me section
-│   ├── common/       # Reusable components (RoundImage, SocialMedia)
-│   ├── contact/      # Contact form section
-│   ├── footer/       # Footer component
-│   ├── home/         # Home/intro section
-│   └── navbar/       # Navigation bar
-├── App.jsx           # Main app component
-├── App.module.css    # Global app styles
-├── index.css         # Base styles
-└── main.jsx          # Entry point
+├── components/           # Reusable components
+│   ├── RoundImage        # Circular image component
+│   └── SocialMediaContainer  # Social media links
+├── sections/             # Page sections
+│   ├── about/            # About me section
+│   ├── contact/          # Contact form section
+│   ├── footer/           # Footer component
+│   ├── home/             # Home/intro section
+│   ├── navbar/           # Navigation bar with scroll tracking
+│   └── projects/         # Projects showcase
+├── App.jsx               # Main app component
+├── App.module.css        # Global app styles
+├── index.css             # Base styles
+└── main.jsx              # Entry point
 ```
 
 ## License
