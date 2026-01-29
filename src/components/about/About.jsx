@@ -7,8 +7,8 @@ function About() {
       <div className={globalStyles.section_content}>
         <h2 className={styles.title}>About Me</h2>
         <p className={styles.description}>
-          I'm a Software Engineer with 5 years of experience in the automotive infotainment
-          industry. I've worked across frontend, middleware, and DevOps teams, which has made me a
+          I&#39;m a Software Engineer with 5 years of experience in the automotive infotainment
+          industry. I&#39;ve worked across frontend, middleware, and DevOps teams, which has made me a
           versatile engineer who enjoys solving problems at every layer of the stack.
         </p>
         <p className={styles.description}>
