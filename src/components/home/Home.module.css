@@ -11,12 +11,12 @@
 .text_subtitle {
   font-size: 1.5rem;
   color: var(--secondary-font-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .text_description {
   font-size: 1rem;
-  color: var(--tertiary-font-color);
+  color: var(--secondary-font-color);
   line-height: 1.5;
 }
 
