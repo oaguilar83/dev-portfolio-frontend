@@ -1,7 +1,6 @@
-import styles from './SocialMediaContainer.module.css';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import styles from './SocialMediaContainer.module.css';
 
 function SocialMedia() {
   return (

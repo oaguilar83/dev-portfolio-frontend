@@ -1,6 +1,5 @@
-import styles from './RoundImage.module.css';
-
 import PropTypes from 'prop-types';
+import styles from './RoundImage.module.css';
 
 function RoundImage({ image, alt }) {
   return (
