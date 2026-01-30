@@ -19,6 +19,8 @@ A personal developer portfolio website built with React and Vite.
 - Material UI (MUI) Icons
 - EmailJS
 - CSS Modules
+- Vitest + React Testing Library
+- react-hot-toast
 
 ## Getting Started
 
@@ -75,6 +77,19 @@ npm run preview
 npm run lint
 ```
 
+### Testing
+
+```bash
+# Run tests in watch mode
+npm run test
+
+# Run tests once
+npm run test:run
+
+# Run tests with coverage
+npm run test:coverage
+```
+
 ## Deployment
 
 ### CI/CD Pipeline
@@ -101,13 +116,19 @@ src/
 ├── components/           # Reusable components
 │   ├── RoundImage        # Circular image component
 │   └── SocialMediaContainer  # Social media links
+├── data/                 # Static data and content
+│   └── projects.js       # Project showcase data
+├── hooks/                # Custom React hooks
+│   ├── useActiveSection  # Scroll-based active section tracking
+│   └── useInView         # Intersection Observer hook for animations
 ├── sections/             # Page sections
 │   ├── about/            # About me section
-│   ├── contact/          # Contact form section
+│   ├── contact/          # Contact form section with toast notifications
 │   ├── footer/           # Footer component
 │   ├── home/             # Home/intro section
 │   ├── navbar/           # Navigation bar with scroll tracking
 │   └── projects/         # Projects showcase
+├── test/                 # Test setup and utilities
 ├── App.jsx               # Main app component
 ├── App.module.css        # Global app styles
 ├── index.css             # Base styles
