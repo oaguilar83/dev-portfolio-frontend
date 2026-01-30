@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useInView } from '../../hooks/useInView';
 import { projects } from '../../data/projects';
 import globalStyles from '../../App.module.css';
 import styles from './Projects.module.css';
 
 function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [ref, isInView] = useInView({ threshold: 0.1 });
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -24,7 +26,10 @@ function Projects() {
 
   return (
     <section id="projects" className={globalStyles.section}>
-      <div className={globalStyles.section_content}>
+      <div
+        ref={ref}
+        className={`${globalStyles.section_content} ${isInView ? globalStyles.animate_visible : globalStyles.animate_hidden}`}
+      >
         <h1 className={styles.title}>Projects</h1>
 
         <div className={styles.carousel_container}>

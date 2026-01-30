@@ -1,10 +1,16 @@
+import { useInView } from '../../hooks/useInView';
 import globalStyles from '../../App.module.css';
 import styles from './About.module.css';
 
 function About() {
+  const [ref, isInView] = useInView({ threshold: 0.1 });
+
   return (
     <section id="about" className={globalStyles.section}>
-      <div className={globalStyles.section_content}>
+      <div
+        ref={ref}
+        className={`${globalStyles.section_content} ${isInView ? globalStyles.animate_visible : globalStyles.animate_hidden}`}
+      >
         <h2 className={styles.title}>About Me</h2>
         <p className={styles.description}>
           I&#39;m a Software Engineer with 5 years of experience building solutions across the full

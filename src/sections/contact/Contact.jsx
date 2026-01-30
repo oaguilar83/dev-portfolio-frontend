@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
+import { useInView } from '../../hooks/useInView';
 import globalStyles from '../../App.module.css';
 import styles from './Contact.module.css';
 
@@ -40,6 +41,7 @@ function Contact() {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [ref, isInView] = useInView({ threshold: 0.1 });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -102,7 +104,10 @@ function Contact() {
 
   return (
     <section id="contact" className={globalStyles.section}>
-      <div className={globalStyles.section_content}>
+      <div
+        ref={ref}
+        className={`${globalStyles.section_content} ${isInView ? globalStyles.animate_visible : globalStyles.animate_hidden}`}
+      >
         <h2 className={styles.title}>Contact Me</h2>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.form_group}>

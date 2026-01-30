@@ -1,12 +1,18 @@
+import { useInView } from '../../hooks/useInView';
 import RoundImage from '../../components/RoundImage';
 import SocialMediaContainer from '../../components/SocialMediaContainer';
 import globalStyles from '../../App.module.css';
 import styles from './Home.module.css';
 
 function Home() {
+  const [ref, isInView] = useInView({ threshold: 0.1 });
+
   return (
     <section id="home" className={globalStyles.section}>
-      <div className={globalStyles.section_content}>
+      <div
+        ref={ref}
+        className={`${globalStyles.section_content} ${isInView ? globalStyles.animate_visible : globalStyles.animate_hidden}`}
+      >
         <div className={styles.image_text_content}>
           <div className={styles.image}>
             <RoundImage image="images/profile_picture.jpeg" alt="Handsome young man" />

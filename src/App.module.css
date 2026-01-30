@@ -38,6 +38,17 @@ html {
   text-align: left;
 }
 
+.animate_hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate_visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 @media screen {
   @media (min-width: 768px) {
     .section {
