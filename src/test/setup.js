@@ -26,7 +26,7 @@ class MockIntersectionObserver {
   }
 }
 
-global.IntersectionObserver = MockIntersectionObserver;
+globalThis.IntersectionObserver = MockIntersectionObserver;
 
 // Mock scrollIntoView
 Element.prototype.scrollIntoView = vi.fn();

@@ -26,7 +26,7 @@ describe('useInView', () => {
       disconnect = mockDisconnect;
     }
 
-    global.IntersectionObserver = MockIntersectionObserver;
+    globalThis.IntersectionObserver = MockIntersectionObserver;
   });
 
   it('should return a ref and initial isInView as false', () => {
