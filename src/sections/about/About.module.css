@@ -1,19 +1,19 @@
 .title {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--primary-font-color);
+  color: var(--primary-light);
 }
 
 .description {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--secondary-font-color);
+  color: var(--secondary-light);
   margin-bottom: 1rem;
 }
 
 .skills_title {
   font-size: 1.5rem;
-  color: var(--primary-font-color);
+  color: var(--primary-light);
   margin-bottom: 1rem;
 }
 
@@ -26,8 +26,8 @@
 }
 
 .skill_item {
-  background-color: var(--secondary-font-color);
-  color: var(--primary-background-color);
+  background-color: var(--secondary-light);
+  color: var(--primary-dark);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   font-size: 0.75rem;

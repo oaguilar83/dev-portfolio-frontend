@@ -1,9 +1,10 @@
 :root {
-  --primary-background-color: #0F0F0F;
-  --secondary-background-color: #151515;
+  --primary-dark: #0F0F0F;
+  --secondary-dark: #151515;
+  --primary-light: #FFFFFF;
+  --secondary-light: #ECEFF1;
   --accent-color: #4FC3F7;
-  --primary-font-color: white;
-  --secondary-font-color: #ECEFF1;
+  --error-color: #F44336;
 }
 
 * {
@@ -20,7 +21,7 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-background-color);
+  background-color: var(--primary-dark);
   font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 

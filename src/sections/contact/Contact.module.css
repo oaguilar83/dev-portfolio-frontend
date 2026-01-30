@@ -1,7 +1,7 @@
 .title {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--primary-font-color);
+  color: var(--primary-light);
   text-align: center;
 }
 
@@ -18,18 +18,18 @@
 .form_group label {
   display: block;
   font-size: 1.5rem;
-  color: var(--secondary-font-color);
+  color: var(--secondary-light);
   text-align: left;
   margin-bottom: 0.5rem;
 }
 
 .form_group input,
 .form_group textarea {
-  background-color: var(--primary-background-color);
-  color: var(--primary-font-color);
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 2px solid var(--secondary-font-color);
+  border: 2px solid var(--secondary-light);
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s;
@@ -43,18 +43,18 @@
 }
 
 .input_error {
-  border-color: #f44336;
+  border-color: var(--error-color);
 }
 
 .input_error:focus {
-  border-color: #f44336;
+  border-color: var(--error-color);
 }
 
 .error_message {
   display: block;
-  color: #f44336;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
+  color: var(--error-color);
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
 .form-group textarea {
@@ -65,8 +65,8 @@
 .submit_btn {
   width: 100%;
   padding: 1rem;
-  background-color: var(--secondary-background-color);
-  color: var(--primary-font-color);
+  background-color: var(--secondary-dark);
+  color: var(--primary-light);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
