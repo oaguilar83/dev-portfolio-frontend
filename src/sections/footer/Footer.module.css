@@ -1,12 +1,12 @@
 .footer {
-  background-color: var(--secondary-background-color);
-  color: var(--primary-font-color);
+  background-color: var(--secondary-dark);
+  color: var(--primary-light);
   text-align: center;
   padding: 1rem;
 }
 
 .footer_p {
-  background-color: var(--secondary-background-color);
+  background-color: var(--secondary-dark);
 }
 
 @media screen {
