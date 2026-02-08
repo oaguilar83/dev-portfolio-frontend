@@ -40,6 +40,8 @@ function About() {
             <li className={styles.skill_item}>Terraform</li>
             <li className={styles.skill_item}>Ansible</li>
             <li className={styles.skill_item}>Docker</li>
+            <li className={styles.skill_item}>Nginx</li>
+            <li className={styles.skill_item}>Git</li>
           </ul>
         </div>
       </div>
