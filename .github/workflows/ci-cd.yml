@@ -1,13 +1,15 @@
 name: CI/CD Pipeline
 
 on:
+  push:
+    branches: [main]
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
 
 jobs:
   lint-test-and-build:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged != true
+    if: github.event_name == 'pull_request'
 
     steps:
       - name: Checkout repository
@@ -37,7 +39,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.base.ref == 'main' && github.event.pull_request.merged == true
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout repository
