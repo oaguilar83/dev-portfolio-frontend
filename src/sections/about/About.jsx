@@ -33,7 +33,7 @@ function About() {
             <li className={styles.skill_item}>PostgreSQL</li>
             <li className={styles.skill_item}>MongoDB</li>
             <li className={styles.skill_item}>AWS</li>
-            <li className={styles.skill_item}>Spring Projects</li>
+            <li className={styles.skill_item}>Spring</li>
             <li className={styles.skill_item}>React</li>
             <li className={styles.skill_item}>Jenkins</li>
             <li className={styles.skill_item}>GitHub Actions</li>
